@@ -22,7 +22,8 @@ class ChatScreen extends StatefulWidget {
   State createState() => ChatScreenState();
 }
 
-class ChatScreenState extends State<ChatScreen> with SingleTickerProviderStateMixin {
+class ChatScreenState extends State<ChatScreen>
+    with SingleTickerProviderStateMixin {
   late TabController _tabController;
 
   @override
@@ -35,7 +36,6 @@ class ChatScreenState extends State<ChatScreen> with SingleTickerProviderStateMi
     _tabController.dispose();
     super.dispose();
   }
-}
 
   @override
   Widget build(BuildContext context) {
@@ -52,7 +52,7 @@ class ChatScreenState extends State<ChatScreen> with SingleTickerProviderStateMi
                 icon: CircleAvatar(
                   radius: 12.0,
                   backgroundImage: NetworkImage(
-                    'https://assets-global.website-files.com/63bb7d51076d755de475e3a3/63be71febd2de358b87f9b6f_Jennie-Kim.webp',
+                    'https://www.the-sun.com/wp-content/uploads/sites/6/2023/10/KS-crunchy-cat-op.jpg?strip=all&quality=100&w=1080&h=1080&crop=1',
                   ),
                 ),
               ),
@@ -63,8 +63,7 @@ class ChatScreenState extends State<ChatScreen> with SingleTickerProviderStateMi
           ),
         ),
       ),
-
-        body: Padding(
+      body: Padding(
         padding: EdgeInsets.all(8.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -85,7 +84,7 @@ class ChatScreenState extends State<ChatScreen> with SingleTickerProviderStateMi
                           padding: EdgeInsets.all(14),
                           child: Icon(
                             Icons.camera_alt,
-                            size: 20,
+                            size: 28,
                             color: Colors.blue,
                           ),
                         ),
@@ -107,7 +106,7 @@ class ChatScreenState extends State<ChatScreen> with SingleTickerProviderStateMi
                         ),
                       ],
                     ),
-                    SizedBox(height: 20),
+                    SizedBox(height: 8),
                     Text(
                       'Add a story',
                       style: TextStyle(
@@ -179,9 +178,21 @@ class ChatScreenState extends State<ChatScreen> with SingleTickerProviderStateMi
                   ),
                 ),
               ],
+            ),
+            SizedBox(height: 7),
+            Row(
+              children: [
+                Expanded(
+                  child: Container(
+                    height: 1,
+                    color: Colors.black.withOpacity(0.1),
+                  ),
+                ),
+              ],
+            ),
 
-
-              // Row 2
+            SizedBox(height: 10),
+            // Row 2
             Row(
               children: [
                 Row(
@@ -269,17 +280,223 @@ class ChatScreenState extends State<ChatScreen> with SingleTickerProviderStateMi
                     ),
                     SizedBox(width: 30),
                     Icon(Icons.chevron_right, color:Colors.grey),
+
                   ],
                 ),
               ],
             ),
             SizedBox(height: 7),
+            Row(
+              children: [
+                Expanded(
+                  flex: 1,
+                  child: SizedBox(),
+                ),
+                Expanded(
+                  flex: 9,
+                  child: Divider(
+                    color: Colors.black.withOpacity(0.1),
+                    thickness: 1,
+                    height: 1,
+                  ),
+                ),
+              ],
+            ),
+
+            SizedBox(height: 10),
+            // Row 3 (Duplicated)
+            Row(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Stack(
+                      children: [
+                        Container(
+                          width: 55,
+                          height: 55,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: Colors.blue[300],
+                          ),
+                          padding: EdgeInsets.all(2),
+                          child: ClipOval(
+                            child: Image.network(
+                              'https://assets-global.website-files.com/63bb7d51076d755de475e3a3/63be71febd2de358b87f9b6f_Jennie-Kim.webp',
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                        ),
+                        Positioned(
+                          right: 0,
+                          bottom: 2,
+                          child: Container(
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: Colors.blue,
+                            ),
+                            padding: EdgeInsets.all(1),
+                            child: Icon(
+                              Icons.bar_chart,
+                              size: 13,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(width: 10),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Baby:3',
+                          style: TextStyle(
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        SizedBox(height: 3),
+                        Text(
+                          'san k Na?!',
+                          style: TextStyle(
+                            fontSize: 12,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+                Expanded(
+                  child: SizedBox(),
+                ),
+                Row(
+                  children: [
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          '1:44 A.M',
+                          style: TextStyle(
+                            fontSize: 8,
+                          ),
+                        ),
+                        SizedBox(height: 5),
+                        Text(
+                          '',
+                          style: TextStyle(
+                            fontSize: 8,
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(width: 30),
+                    Icon(Icons.chevron_right, color:Colors.grey),
+                  ],
+                ),
+              ],
             ),
             SizedBox(height: 7),
+            Row(
+              children: [
+                Expanded(
+                  flex: 1,
+                  child: SizedBox(),
+                ),
+                Expanded(
+                  flex: 9,
+                  child: Divider(
+                    color: Colors.black.withOpacity(0.1),
+                    thickness: 1,
+                    height: 1,
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(height: 10),
+            // Row 4 (Duplicated)
+            Row(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Stack(
+                      children: [
+                        Container(
+                          width: 55,
+                          height: 55,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: Colors.blue,
+                          ),
+                          padding: EdgeInsets.all(2),
+                          child: Icon(
+                            Icons.person_add,
+                            size: 35,
+                            color: Colors.white,
+                          ),
+                        ),
+
+
+                      ],
+                    ),
+                    SizedBox(width: 10),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Invite Friends',
+                          style: TextStyle(
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        SizedBox(height: 3),
+                        Text(
+                          'More friends, more fun',
+                          style: TextStyle(
+                            fontSize: 12,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+                Expanded(
+                  child: SizedBox(),
+                ),
+                Row(
+                  children: [
+
+                    SizedBox(width: 30),
+                    Icon(Icons.chevron_right, color:Colors.grey),
+                  ],
+                ),
+              ],
+            ),
+            Row(
+              children: [
+                Expanded(
+                  flex: 1,
+                  child: SizedBox(),
+                ),
+                Expanded(
+                  flex: 9,
+                  child: Divider(
+                    color: Colors.black.withOpacity(0.1),
+                    thickness: 1,
+                    height: 1,
+                  ),
+                ),
+              ],
+            ),
           ],
+
         ),
+
       ),
-bottomNavigationBar: Container(
+
+      bottomNavigationBar: Container(
         decoration: BoxDecoration(
           border: Border(
             top: BorderSide(width: 1.0, color: Colors.black.withOpacity(0.1)),
@@ -290,7 +507,7 @@ bottomNavigationBar: Container(
           children: [
             IconButton(
               icon: Icon(Icons.add),
-color:Colors.blue,
+              color:Colors.blue,
               onPressed: () {
 
                 // Add your functionality here
@@ -298,7 +515,7 @@ color:Colors.blue,
             ),
             IconButton(
               icon: Icon(Icons.search),
-color:Colors.blue,
+              color:Colors.blue,
               onPressed: () {
                 // Add your functionality here
               },
